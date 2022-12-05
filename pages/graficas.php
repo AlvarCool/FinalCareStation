@@ -157,7 +157,7 @@
 
                 $con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
                 
-                $temperatura = mysqli_query($con, "SELECT * FROM esp_data.temperatura order by id_temp desc limit 4;");
+                $temperatura = mysqli_query($con, "SELECT * FROM esp_data.temperatura order by id_temp asc limit 4;");
                 $humedad = mysqli_query($con, "SELECT * FROM esp_data.humedad order by id_hum desc limit 4;");
                 $humedad_rel = mysqli_query($con, "SELECT * FROM esp_data.humedad_rel order by humedad_rel desc limit 4;");
                 $uv = mysqli_query($con, "SELECT * FROM esp_data.uv order by uv desc limit 4;");
